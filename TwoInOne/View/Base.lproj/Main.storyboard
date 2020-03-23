@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bGe-gV-fep">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Меню-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TwoInOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQF-db-rDY">
+                                <rect key="frame" x="40" y="459" width="157" height="57"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.7523329258" blue="0.1722044647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="15" maxX="30" maxY="15"/>
+                                <state key="normal" title="Угадать">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="firstButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GZ7-fc-Qst"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10k-OE-5JT">
+                                <rect key="frame" x="223" y="459" width="151" height="57"/>
+                                <color key="backgroundColor" red="0.77554100749999999" green="0.38163834810000002" blue="0.91768610480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="15" maxX="30" maxY="15"/>
+                                <state key="normal" title="Загадать">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fmv-nQ-SHP" kind="show" id="683-DE-v8D"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="zoology" translatesAutoresizingMaskIntoConstraints="NO" id="t6U-pe-hvP">
+                                <rect key="frame" x="20" y="182" width="374" height="238"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aQF-db-rDY" secondAttribute="bottom" constant="346" id="0aj-QZ-HC7"/>
+                            <constraint firstItem="10k-OE-5JT" firstAttribute="leading" secondItem="aQF-db-rDY" secondAttribute="trailing" constant="26" id="M5g-qJ-ADs"/>
+                            <constraint firstItem="aQF-db-rDY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="YHC-yh-N9v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="10k-OE-5JT" secondAttribute="trailing" constant="40" id="byZ-iQ-IPd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="10k-OE-5JT" secondAttribute="bottom" constant="346" id="iHp-Lo-33x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Меню" id="GgD-rr-2TT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="118.52678571428571"/>
+        </scene>
+        <!--Загадай число-->
+        <scene sceneID="qo3-ok-4EY">
+            <objects>
+                <viewController id="fmv-nQ-SHP" customClass="SecondViewController" customModule="TwoInOne" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3cK-KG-XHe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Хмм... Может вы загадали число 500 000?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwV-Qv-Skv">
+                                <rect key="frame" x="35" y="208" width="344" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="0.23530251138219174" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k6o-PS-DGs">
+                                <rect key="frame" x="28" y="327" width="97" height="43"/>
+                                <color key="backgroundColor" red="0.98844677209999998" green="0.85486298800000005" blue="0.26248639820000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="8" maxX="10" maxY="8"/>
+                                <state key="normal" title="Больше">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="biggerButtonAction:" destination="fmv-nQ-SHP" eventType="touchUpInside" id="5a9-PX-89T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMn-gB-JWQ">
+                                <rect key="frame" x="285" y="327" width="102" height="43"/>
+                                <color key="backgroundColor" red="0.77554100749999999" green="0.38163834810000002" blue="0.91768610480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="8" maxX="10" maxY="8"/>
+                                <state key="normal" title="Меньше">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="lessButtonAction:" destination="fmv-nQ-SHP" eventType="touchUpInside" id="vCj-CF-NKK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqq-Fb-TCc">
+                                <rect key="frame" x="139" y="327" width="132" height="43"/>
+                                <color key="backgroundColor" red="0.99435466530000005" green="0.36650228499999998" blue="0.58823150400000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="8" maxX="15" maxY="8"/>
+                                <state key="normal" title="Угадал!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonAction:" destination="fmv-nQ-SHP" eventType="touchUpInside" id="HKA-Ub-hfA"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cultures" translatesAutoresizingMaskIntoConstraints="NO" id="cYk-U3-RkS">
+                                <rect key="frame" x="20" y="380" width="374" height="512"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nMn-gB-JWQ" firstAttribute="leading" secondItem="dqq-Fb-TCc" secondAttribute="trailing" constant="14" id="7C3-Xs-KhS"/>
+                            <constraint firstItem="dqq-Fb-TCc" firstAttribute="top" secondItem="bwV-Qv-Skv" secondAttribute="bottom" constant="61.5" id="Dpt-Kw-W8e"/>
+                            <constraint firstItem="cYk-U3-RkS" firstAttribute="leading" secondItem="wZD-US-ltZ" secondAttribute="leading" constant="20" id="EaX-DK-A25"/>
+                            <constraint firstItem="wZD-US-ltZ" firstAttribute="trailing" secondItem="nMn-gB-JWQ" secondAttribute="trailing" constant="27" id="Etb-re-g9P"/>
+                            <constraint firstItem="k6o-PS-DGs" firstAttribute="leading" secondItem="wZD-US-ltZ" secondAttribute="leading" constant="28" id="Knz-mR-bKT"/>
+                            <constraint firstItem="wZD-US-ltZ" firstAttribute="trailing" secondItem="bwV-Qv-Skv" secondAttribute="trailing" constant="35" id="VBv-Pc-3hF"/>
+                            <constraint firstItem="bwV-Qv-Skv" firstAttribute="leading" secondItem="wZD-US-ltZ" secondAttribute="leading" constant="35" id="XbA-du-5rC"/>
+                            <constraint firstItem="bwV-Qv-Skv" firstAttribute="top" secondItem="wZD-US-ltZ" secondAttribute="top" constant="120" id="byH-ME-Xsq"/>
+                            <constraint firstItem="k6o-PS-DGs" firstAttribute="top" secondItem="bwV-Qv-Skv" secondAttribute="bottom" constant="61.5" id="ehp-HF-70i"/>
+                            <constraint firstItem="wZD-US-ltZ" firstAttribute="trailing" secondItem="cYk-U3-RkS" secondAttribute="trailing" constant="20" id="j6e-2n-WpO"/>
+                            <constraint firstItem="nMn-gB-JWQ" firstAttribute="top" secondItem="bwV-Qv-Skv" secondAttribute="bottom" constant="61.5" id="jS3-7J-kfW"/>
+                            <constraint firstItem="cYk-U3-RkS" firstAttribute="top" secondItem="k6o-PS-DGs" secondAttribute="bottom" constant="10" id="oNx-af-FGW"/>
+                            <constraint firstItem="dqq-Fb-TCc" firstAttribute="leading" secondItem="k6o-PS-DGs" secondAttribute="trailing" constant="14" id="zzg-CX-CPM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wZD-US-ltZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Загадай число" id="hZu-h6-Eng"/>
+                    <connections>
+                        <outlet property="botAnswer" destination="bwV-Qv-Skv" id="Pek-0U-6oa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmy-yp-bsP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1797.1014492753625" y="118.52678571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pzw-UP-De0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bGe-gV-fep" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Eu4-2W-H3Q">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5Op-oJ-YMh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bim-k4-1DX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="265" y="119"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cultures" width="512" height="512"/>
+        <image name="zoology" width="512" height="512"/>
+    </resources>
+</document>
