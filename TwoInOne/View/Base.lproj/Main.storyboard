@@ -43,12 +43,24 @@
                                 <rect key="frame" x="20" y="182" width="374" height="238"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmc-ua-9XJ">
+                                <rect key="frame" x="132" y="544" width="151" height="57"/>
+                                <color key="backgroundColor" red="0.52718251940000005" green="0.22267133" blue="0.38431942460000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="15" maxX="30" maxY="15"/>
+                                <state key="normal" title="Рекорды">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aQF-db-rDY" secondAttribute="bottom" constant="346" id="0aj-QZ-HC7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cmc-ua-9XJ" secondAttribute="trailing" constant="131" id="A7M-gw-FJY"/>
                             <constraint firstItem="10k-OE-5JT" firstAttribute="leading" secondItem="aQF-db-rDY" secondAttribute="trailing" constant="26" id="M5g-qJ-ADs"/>
+                            <constraint firstItem="Cmc-ua-9XJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="132" id="UJ4-PV-NwV"/>
                             <constraint firstItem="aQF-db-rDY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="YHC-yh-N9v"/>
+                            <constraint firstItem="Cmc-ua-9XJ" firstAttribute="top" secondItem="aQF-db-rDY" secondAttribute="bottom" constant="28" id="aPN-OO-V9v"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="10k-OE-5JT" secondAttribute="trailing" constant="40" id="byZ-iQ-IPd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="10k-OE-5JT" secondAttribute="bottom" constant="346" id="iHp-Lo-33x"/>
                         </constraints>
