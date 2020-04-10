@@ -9,15 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func firstButtonAction(_ sender: Any) {
         let simpleView = SimpleViewController(nibName: "SimpleViewController", bundle: nil)
-              navigationController?.pushViewController(simpleView, animated: true)
+        navigationController?.pushViewController(simpleView, animated: true)
     }
+    
 }
 
