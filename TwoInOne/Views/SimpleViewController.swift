@@ -8,11 +8,16 @@
 
 import UIKit
 
-class SimpleViewController: UIViewController {
-    @IBOutlet weak var attemptCount: UILabel!
-    @IBOutlet weak var userNumber: UITextField!
-    private var attempt: Int = 3
+
+class SimpleViewController: UIViewController{
+    
+    @IBOutlet private weak var attemptCount: UILabel!
+    @IBOutlet private weak var userNumber: UITextField!
+    
+    private var attempt: Int = 5
     private var number: Int = -1
+    private var recordsArray = [RecordModel]()
+    private let recordsArrayKey = "Simple"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +26,8 @@ class SimpleViewController: UIViewController {
         userNumber.delegate = self
     }
     
-    @IBAction func verifyButtonAction(_ sender: Any) {
+    @IBAction private func verifyButtonAction(_ sender: Any) {
+        
         if userNumber.text!.isEmpty {
             addAlert(s: "Вы не ввели число.")
         } else {
@@ -33,23 +39,27 @@ class SimpleViewController: UIViewController {
         }
     }
     
-    func checkUserAns(ans: Int) {
+    private func checkUserAns(ans: Int) {
         if attempt == 0 {
             addAlert(s: "Вы проиграли. Будет загадано новое число")
             restart()
         } else if ans == number {
+            saveRecord(attemp: attempt, numbe: number)
             restart()
             addAlert(s: "Вы угадали! Будет запущена новая игра")
-        } else if ans > number { addAlert(s: "Ваше значение больше")
-        } else if ans < number { addAlert(s: "Ваше значение меньше") }
+        } else if ans > number {
+            addAlert(s: "Ваше значение больше")
+        } else if ans < number {
+            addAlert(s: "Ваше значение меньше")
+        }
     }
     
-    func restart() {
-        attempt = 3
+    private func restart() {
+        attempt = 5
         number = getRandomValue()
     }
     
-    func addAlert(s: String) {
+    private func addAlert(s: String) {
         let alert = UIAlertController(title: s, message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert,animated: true)
@@ -58,6 +68,14 @@ class SimpleViewController: UIViewController {
     func getRandomValue() -> Int {
         return Int.random(in: 1...10)
     }
+    
+    private func saveRecord(attemp: Int, numbe: Int) {
+        let newRecord = RecordModel(attempt: attemp,number: numbe)
+        recordsArray = getRecords(forGame: recordsArrayKey)
+        recordsArray.append(newRecord)
+        saveRecords(recordsArray: recordsArray, forGame: recordsArrayKey)
+    }
+    
 }
 
 extension SimpleViewController: UITextFieldDelegate {
@@ -67,3 +85,5 @@ extension SimpleViewController: UITextFieldDelegate {
         return allowedCharacters.isSuperset(of: characterSet)
     }
 }
+
+
